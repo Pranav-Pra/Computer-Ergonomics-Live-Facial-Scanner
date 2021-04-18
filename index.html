@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onload="brython()">
+    <h1>Computer Ergonomics Facial Scanner</h1>
+    <div class="sidebar">
+      <h3>Important Facts</h3>
+      <ol>
+        <li>Ergonomic Injuries are common because people use for hours on end</li>
+        <li>Programmers and students are prone to strain in back and neck</li>
+        <li>Affects more than just health, and poor posture can effect productivity too</li>
+        <li>Ergonomic Furniture can be very benificial to minimize strain</li>
+        <li>Students are especially at risk because of electronics in school</li>
+      </ol>
+    </div>
+    <div class="inputDiv">
+	  <h3>Type in the width and height of your monitor (inches)</h3>
+      <label for="width">Width:</label>
+	  <input type="number" id="width" value="1">
+	  <label for="height">Height: </label>
+      <input type="number" id="height" value="1">
+	  <button id="start">Click!</button>
+    </div>
+	<img id="bg" src = "{{ url_for('vid') }}">
+	<script type="text/python">
+    /***
+	  from browser import document, console
+	  import math
+
+	  def test(ev):
+		a = document['width'].value
+		b = document['height'].value
+		a = int(a)
+		b = int(b)
+		if a > 0 and b > 0:
+			c = math.sqrt(a ** 2 + b ** 2)
+			c = math.floor(c)
+			oneTwentyFive = c * 1.25
+			double = c * 2.0
+
+		print(oneTwentyFive, double)
+
+	  document['start'].bind('click', test)
+      ]
+      */
+	</script>
+  </body>
+</html>
